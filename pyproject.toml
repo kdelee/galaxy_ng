@@ -79,3 +79,16 @@ ignore = [
     "profiles/**",
     "galaxy_ng/_vendor/**",
 ]
+
+[tool.tox]
+legacy_tox_ini = """
+
+"""
+
+[tool.coverage.run]
+relative_files = true
+data_file = "/tmp/.coverage"
+omit = [
+	"galaxy_ng/_vendor/*",
+	"galaxy_ng/tests/*",
+]
